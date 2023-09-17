@@ -1,0 +1,25 @@
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main()
+{
+    double x,y,z;
+
+    cout<<"x ="<<'\n';
+    cin>>x;
+
+    cout<<"y ="<<'\n';
+    cin>>y;
+
+    cout<<"z ="<<'\n';
+    cin>>z;
+
+    double s1 = pow(x, y/x) - pow(y/x,1.0/3);
+    double s2 = fabs(s1);
+    double s3 = ((cos(y) - (z/(y-x))) / (1 + pow(y-x,2))) * (y-x);
+
+    cout<<s2 + s3;
+    return 0;
+}
