@@ -1,0 +1,27 @@
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main()
+{
+    double x,y,z;
+
+    cout<<"x ="<<'\n';
+    cin>>x;
+
+    cout<<"y ="<<'\n';
+    cin>>y;
+
+    cout<<"z ="<<'\n';
+    cin>>z;
+
+    double s1 = pow(9 + x*x - (2*x*y) + y*y, 1/3.0);
+    double s2 = x*x + y*y + 2;
+    double s3 = exp(fabs(x - y)) * pow(tan(z),3.0);
+
+
+    cout<<s1/s2 - s3;
+
+    return 0;
+}
