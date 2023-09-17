@@ -1,0 +1,27 @@
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main()
+{
+    double x,y,z;
+
+    cout<<"x ="<<'\n';
+    cin>>x;
+
+    cout<<"y ="<<'\n';
+    cin>>y;
+
+    cout<<"z ="<<'\n';
+    cin>>z;
+
+    double s0 = -(sqrt(fabs(x)));
+    double s1 = log(pow(y,s0));
+    double s2 = x - y/2.0;
+    double s3 = pow(sin(atan(z)),2);
+
+
+    cout<<s1*s2+s3;
+    return 0;
+}
