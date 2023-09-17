@@ -1,0 +1,27 @@
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main()
+{
+    double x,y,z;
+
+    cout<<"x ="<<'\n';
+    cin>>x;
+
+    cout<<"y ="<<'\n';
+    cin>>y;
+
+    cout<<"z ="<<'\n';
+    cin>>z;
+
+    double s0 = pow(x,y+1) + exp(y-1);
+    double s1 = 1 + x * fabs(y-tan(z));
+    double s2 = 1 + fabs(y-x);
+    double s3 = pow(fabs(y-x),2)/2.0;
+    double s4 = pow(fabs(y-x),3)/3.0;
+
+    cout<<s0/s1*s2+s3-s4;
+    return 0;
+}
