@@ -19,6 +19,7 @@ int main()
     double s0 = pow(2, pow(y,x));
     double s1 = pow(pow(3,x),y);
     double s2 = (y * (atan(z) - 1/3.0)) / (fabs(x) + (1/(y*y+1)));
+
     cout<<s0 + s1 - s2;
     return 0;
 }
