@@ -1,0 +1,22 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    setlocale(0,"");
+
+    int v, t;
+
+    cout << "Скорость Пети = ";
+    cin >> v;
+
+    cout << "Время пути Пети = ";
+    cin >> t;
+
+    int s = v * t % 78;
+
+    cout << "Петя остановился на метке " << s;
+
+    return 0;
+}
