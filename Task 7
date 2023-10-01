@@ -1,0 +1,25 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    setlocale(0,"");
+
+    int h, a, b;
+
+    cout << "Высота столба = ";
+    cin >> h;
+
+    cout << "За день поднимает на a = ";
+    cin >> a;
+
+    cout << "За ночь спускается на b = ";
+    cin >> b;
+
+    int s = h / (a - b);
+
+    cout << "Улитка доползёт до вершины на " << s << " день";
+
+    return 0;
+}
