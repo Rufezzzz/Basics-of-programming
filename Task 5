@@ -1,0 +1,21 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    setlocale(0,"");
+
+    int n, m;
+
+    cout << "Машина проезжает за 1 день  n = ";
+    cin >> n;
+
+    cout << "Машине нужно проехать m = ";
+    cin >> m;
+
+    int s = (m - 1) / n + 1;
+
+    cout << "Необходимо " << s << " дней";
+    return 0;
+}
