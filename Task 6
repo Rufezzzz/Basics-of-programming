@@ -1,0 +1,19 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    setlocale(0,"");
+
+    int n;
+
+    cout << "Номер пары = ";
+    cin >> n;
+
+    int s = n * 90 + n / 2 * 10 + (n - 1) / 2 * 15;
+
+    cout << s / 60 + 9 << " часов " << s % 60 << " минут";
+    
+    return 0;
+}
