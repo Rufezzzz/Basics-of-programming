@@ -1,30 +1,31 @@
 #include <iostream>
-#include <cmath>
+
 
 using namespace std;
 
 int main()
 {
     setlocale(0,"");
-    
-    int n, sum = 0;
-    
-    cout << "N = ";
+
+    int n;
+
+    cout << "n = ";
     cin >> n;
-    
-    for (int i = 1; i <= n; i++)
+
+    int i = 1;
+
+    int cub = 1;
+
+    while (cub <= n)
     {
-        int ans = 1;
-        
-        for (int j = i; j <= 2 * i; j++)
-        {
-            ans *= j;
-        }
-        
-        sum += ans;
+        cout << i << '\n';
+
+        i++;
+
+        cub = i * i * i;
+
+
     }
-    
-    cout << "Сумма равна = " << sum;
-    
+
     return 0;
 }
