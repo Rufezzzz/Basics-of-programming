@@ -18,9 +18,9 @@ int main()
     }
     else
     {
-        if (a <= 2)
+        if (a >= -2 and a <= 2)
         {
-            y = 2 - a;
+            y = -abs(a) + 2;
         }
         else
         {
