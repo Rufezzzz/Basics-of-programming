@@ -1,0 +1,39 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    
+
+    int N;
+    cout << "Введите порядок матрицы: ";
+    cin >> N;
+    
+    int A[N][N];
+
+    cout << "Введите элементы матрицы A:" << endl;
+    for (int i = 0; i < N; i++)
+    {
+        for (int j = 0; j < N; j++)
+        {
+            cin >> A[i][j];
+        }
+    }
+
+
+    for (int k = 1; k < N; k++)
+    {
+        int min_element = A[0][N - k];
+        
+        for (int i = 1; i < N - k; i++)
+        {
+            if (A[i][i + k] < min_element)
+            {
+                min_element = A[i][i + k];
+            }
+        }
+        
+        cout << "Минимальный элемент для диагонали A1," << N - k << " = " << min_element << endl;
+    }
+
+    return 0;
+}
