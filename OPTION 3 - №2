@@ -1,0 +1,35 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int countWordsWithA(const string& str) {
+    int count = 0;
+    bool inWord = false;
+
+    for (char c : str) {
+        if (isalpha(c)) {
+            if (!inWord) {
+                inWord = true;
+                if (tolower(c) == 'a') {
+                    count++;
+                }
+            }
+        } else {
+            inWord = false;
+        }
+    }
+
+    return count;
+}
+
+int main() {
+    string input;
+    cout << "Введите строку: ";
+    getline(cin, input);
+
+    int count = countWordsWithA(input);
+    cout << "Количество слов, содержащих хотя бы одну букву 'а': " << count << endl;
+
+    return 0;
+}
