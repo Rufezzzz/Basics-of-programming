@@ -1,0 +1,65 @@
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+#include <iomanip>
+using namespace std;
+
+const int MAX_SIZE = 100;
+
+void fillRandom(int matrix[MAX_SIZE][MAX_SIZE], int n, int m) {
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < m; j++) {
+            matrix[i][j] = rand() % 100 - 50; // Заполняем случайными числами от -50 до 49
+        }
+    }
+}
+
+void printMatrix(int matrix[MAX_SIZE][MAX_SIZE], int n, int m) {
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < m; j++) {
+            cout << setw(4) << matrix[i][j]; // Используем setw для выравнивания столбцов
+        }
+        cout << endl;
+    }
+}
+
+void sumOfPositiveElements(int matrix[MAX_SIZE][MAX_SIZE], int n, int m) {
+    for (int i = 0; i < n; i++) {
+        int sum = 0;
+        for (int j = 0; j < m; j++) {
+            if (matrix[i][j] > 0) {
+                sum += matrix[i][j];
+            }
+        }
+        cout << "Сумма положительных элементов " << i+1 << "-й строки: " << sum << endl;
+    }
+}
+
+int main() {
+    int A[MAX_SIZE][MAX_SIZE], B[MAX_SIZE][MAX_SIZE];
+    int n, m, k, t;
+
+    srand(time(0));
+
+    cout << "Введите размеры матрицы A (n m): ";
+    cin >> n >> m;
+    fillRandom(A, n, m);
+
+    cout << "Введите размеры матрицы B (k t): ";
+    cin >> k >> t;
+    fillRandom(B, k, t);
+
+    cout << "Матрица A:" << endl;
+    printMatrix(A, n, m);
+    cout << "Матрица B:" << endl;
+    printMatrix(B, k, t);
+
+    cout << "Сумма положительных элементов каждой строки матрицы A:" << endl;
+    sumOfPositiveElements(A, n, m);
+    
+    cout << "Сумма положительных элементов каждой строки матрицы B:" << endl;
+    sumOfPositiveElements(B, k, t);
+    
+
+    return 0;
+}
